@@ -15,26 +15,26 @@
 */
 
 function consume(param1,param2,callback) {
-  return callback(param1,param2)
+ return callback(param1,param2)
 }
 
 function add(add1,add2) {
-  return add1 + add2
+  return console.log(add1 + add2)
 }
 
 function multiply(num1,num2) {
-  return num1 * num2
+  return console.log(num1 * num2)
 }
 
 function greeting(firstName,lastName) {
-  return `Hello ${firstName} ${lastName}, nice to meet you!`
+  return console.log(`Hello ${firstName} ${lastName}, nice to meet you!`)
 }
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-console.log(consume(2,2,add)); // 4
-console.log(consume(10,16,multiply)); // 160
-console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -43,7 +43,7 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 
 // Explanation: 
 
-//Since internal is a variable that was created in the nestedfunction() parent function, it available to any nested function
+//Since internal is a variable that is inside of the nestedfunction() parent function, its available to any nested function
 
 const external = "I'm outside the function";
 

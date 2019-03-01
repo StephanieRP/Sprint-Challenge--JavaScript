@@ -31,7 +31,6 @@ function CuboidMaker(attr) {
   this.height = attr.height;
 }
 
-
 CuboidMaker.prototype.volume = function() {
   return this.length * this.width * this.height
 }

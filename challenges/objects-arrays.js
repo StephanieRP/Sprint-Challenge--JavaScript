@@ -15,7 +15,7 @@ const dino1 = {
   length: '12m',
   period: 'Late Cretaceious'
 
-}
+};
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const dino2 = {
@@ -25,7 +25,7 @@ const dino2 = {
   length: '9m',
   period: 'Late Jurassic'
 
-}
+};
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 const dino3 = {
@@ -35,7 +35,7 @@ const dino3 = {
   length: '1.8m',
   period: 'Late Cretaceious'
 
-}
+};
 
 // Using your dinosaur objects, log answers to these questions:
 
@@ -91,7 +91,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 for(i=0;i<graduates.length; i++) {
-  contactInfo.push(graduates[i].first_name + ' '+ graduates[i].email)     
+  contactInfo.push(graduates[i].first_name + ' ' + graduates[i].email)     
 }
 console.log(contactInfo);
 
@@ -144,7 +144,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 const lowerCase = [];
 zooAnimals.map(function (newName) {
-    let name = newName.animal_name,
+    let name = newName.animal_name
         lowerName = name.toLowerCase();
         lowerCase.push(lowerName)
 });
@@ -180,23 +180,23 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
-zooAnimals.forEach(name => {
-  let newName =  `Name: ${name.animal_name}, Scientific: ${name.scientific_name}.`;
-  animalNames.push(newName);
-})
+// zooAnimals.forEach(name => {
+//   let newName =  `Name: ${name.animal_name}, Scientific: ${name.scientific_name}.`;
+//   animalNames.push(newName);
+// })
 
-zooAnimals.map(newName => {
-  let name = newName.animal_name,
-      lowerName = name.toLowerCase();
-      lowerCase.push(lowerName)
-});
+// zooAnimals.map(newName => {
+//   let name = newName.animal_name,
+//       lowerName = name.toLowerCase();
+//       lowerCase.push(lowerName)
+// });
 
-zooAnimals.filter(pop => {
-  if(pop.population < 5) {
-    largerPopulation.push(pop.animal_name);
-  }
-})
+// zooAnimals.filter(pop => {
+//   if(pop.population < 5) {
+//     largerPopulation.push(pop.animal_name);
+//   }
+// })
 
-const populationTotal = zooAnimals.reduce((total,totalPop) => {
-  return total += totalPop.population;
-},0)
+// const populationTotal = zooAnimals.reduce((total,totalPop) => {
+//   return total += totalPop.population;
+// },0)
