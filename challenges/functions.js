@@ -14,11 +14,27 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function add(add1,add2) {
+  return add1 + add2
+}
+
+function multiply(num1,num2) {
+  return num1 * num2
+}
+
+function greeting(firstName,lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`
+}
+
+function consume(param1,param2,callback) {
+  return callback(param1,param2)
+}
+
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -27,6 +43,7 @@
 
 // Explanation: 
 
+//Since internal is a variable that was created in the nestedfunction() parent function, it available to any nested function
 
 const external = "I'm outside the function";
 
