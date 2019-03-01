@@ -40,21 +40,21 @@ const dino3 = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-// console.log(dino1.weight);
+console.log(dino1.weight);
 
 // What was the diet of a velociraptor?
-// console.log(dino3.diet);
+console.log(dino3.diet);
 
 // How long was a stegosaurus?
-// console.log(dino2.length);
+console.log(dino2.length);
 
 // What time period did tyrannosaurus live in?
-// console.log(dino1.period);
+console.log(dino1.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 dino1.roar = 'RAWERSRARARWERSARARARRRR'
-// console.log(dino1.roar);
+console.log(dino1.roar);
 
 
 // ==== Arrays ====
@@ -81,7 +81,7 @@ for(i=0;i<graduates.length; i++) {
   universities.push(uni);
   universities.sort();
 }
-// console.log(universities)
+console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -93,7 +93,7 @@ const contactInfo = [];
 for(i=0;i<graduates.length; i++) {
   contactInfo.push(graduates[i].first_name + ' '+ graduates[i].email)     
 }
-// console.log(contactInfo);
+console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
@@ -105,7 +105,7 @@ for(i=0;i<graduates.length; i++) {
     uni.push(universityName)
   }  
 }
-// console.log(uni);
+console.log(uni);
 
 
 // ==== ADVANCED Array Methods ====
@@ -134,7 +134,7 @@ zooAnimals.forEach(function(name) {
   let newName =  `Name: ${name.animal_name}, Scientific: ${name.scientific_name}.`;
   animalNames.push(newName);
 })
-// console.log(animalNames);
+console.log(animalNames);
 
 /* Request 2: .map()    
 
@@ -148,7 +148,7 @@ zooAnimals.map(function (newName) {
         lowerName = name.toLowerCase();
         lowerCase.push(lowerName)
 });
-// console.log(lowerCase); 
+console.log(lowerCase); 
 
 /* Request 3: .filter() 
 
@@ -161,7 +161,7 @@ zooAnimals.filter(function(pop) {
     largerPopulation.push(pop.animal_name);
   }
 })
-// console.log(largerPopulation);
+console.log(largerPopulation);
 
 /* Request 4: .reduce() 
 
@@ -180,3 +180,23 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
+zooAnimals.forEach(name => {
+  let newName =  `Name: ${name.animal_name}, Scientific: ${name.scientific_name}.`;
+  animalNames.push(newName);
+})
+
+zooAnimals.map(newName => {
+  let name = newName.animal_name,
+      lowerName = name.toLowerCase();
+      lowerCase.push(lowerName)
+});
+
+zooAnimals.filter(pop => {
+  if(pop.population < 5) {
+    largerPopulation.push(pop.animal_name);
+  }
+})
+
+const populationTotal = zooAnimals.reduce((total,totalPop) => {
+  return total += totalPop.population;
+},0)

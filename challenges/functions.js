@@ -14,6 +14,10 @@
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function consume(param1,param2,callback) {
+  return callback(param1,param2)
+}
+
 function add(add1,add2) {
   return add1 + add2
 }
@@ -24,10 +28,6 @@ function multiply(num1,num2) {
 
 function greeting(firstName,lastName) {
   return `Hello ${firstName} ${lastName}, nice to meet you!`
-}
-
-function consume(param1,param2,callback) {
-  return callback(param1,param2)
 }
 
 
